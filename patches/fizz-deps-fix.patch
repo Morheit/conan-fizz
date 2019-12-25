@@ -1,0 +1,13 @@
+diff --git a/fizz/CMakeLists.txt b/fizz/CMakeLists.txt
+index f69fc31..e4707e5 100644
+--- a/fizz/CMakeLists.txt
++++ b/fizz/CMakeLists.txt
+@@ -45,7 +45,7 @@ endif()
+ find_package(Boost REQUIRED COMPONENTS system thread filesystem regex context
+                                        program_options)
+ find_package(OpenSSL REQUIRED)
+-find_package(Glog REQUIRED)
++find_package(glog REQUIRED)
+ find_package(DoubleConversion REQUIRED)
+ find_package(Threads REQUIRED)
+ if (UNIX AND NOT APPLE)

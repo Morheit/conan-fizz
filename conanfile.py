@@ -19,6 +19,7 @@ class FizzConan(ConanFile):
         "libsodium/1.0.18@bincrafters/stable"
     )
     exports = ["LICENSE"]
+    exports_sources = ["patches/*.patch"]
     generators = "cmake_paths"
 
     def config_options(self):
@@ -68,6 +69,7 @@ class FizzConan(ConanFile):
         return cmake
 
     def build(self):
+        tools.patch(base_path=self._source_subfolder_path, patch_file='patches/fizz-deps-fix.patch')
         cmake = self._configure_cmake()
         cmake.build()
 
