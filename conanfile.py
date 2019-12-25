@@ -81,6 +81,3 @@ class FizzConan(ConanFile):
         if self.settings.os == "Linux":
             self.cpp_info.libs.extend(["pthread", "m", "dl"])
 
-            if self.settings.compiler == "clang":
-                if self.settings.compiler.libcxx == "libstdc++":
-                    self.cpp_info.libs.append("atomic")
