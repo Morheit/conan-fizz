@@ -6,7 +6,7 @@ import os
 class FizzConan(ConanFile):
     name = "fizz"
     version = "2019.11.11.00"
-    description = "Fizz is a TLS 1.3 implementation"
+    description = "C++14 implementation of the TLS-1.3 standard"
     homepage = "https://github.com/facebookincubator/fizz"
     url = "https://github.com/Morheit/conan-fizz"
     license = "BSD"
@@ -80,4 +80,3 @@ class FizzConan(ConanFile):
         self.cpp_info.libs = tools.collect_libs(self) + ["fizz"]
         if self.settings.os == "Linux":
             self.cpp_info.libs.extend(["pthread", "m", "dl"])
-
