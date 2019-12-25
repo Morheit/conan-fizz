@@ -19,7 +19,6 @@ class FizzConan(ConanFile):
         "libsodium/1.0.18@bincrafters/stable"
     )
     exports = ["LICENSE"]
-    exports_sources = ["patches/*.patch"]
     generators = "cmake_paths"
 
     def config_options(self):
